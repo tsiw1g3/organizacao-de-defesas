@@ -3,7 +3,7 @@ Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos e
 
 ## EQUIPE:
 
-**ANTONIO FRANCISCO DIAS DA SILVA**<br>
+**ANTONIO FRANCISCO DIAS DA SILVA**
 **BERNARDO FLORES SALMERON**<br>
 **GABRIELA BOHANA FERREIRA LIMA**<br>
 **JOÃO PEDRO SANTANA NUNES**<br>
@@ -20,6 +20,7 @@ Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos e
 > Back-end: <br>
 > PHP com Framework Yii2 <br>
 > Construção de RESTFUL API para comunicação com o Front-End
+> Banco de dados relacional em SQL com mySQL 
 
 ### Gestão
 
@@ -30,3 +31,5 @@ Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos e
 > Deploy de build do Front-end com Netlify ou Vercel <br>
 > Deploy do backend com Heroku
 
+
+*OBS: Durante o decorrer do projeto, a equipe pode ou não mudar um ou mais aspectos sobre as dexcisões de quais tecnologias serão utilizadas.*

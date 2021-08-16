@@ -3,7 +3,7 @@ Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos e
 
 ## EQUIPE:
 
-**ANTONIO FRANCISCO DIAS DA SILVA**
+**ANTONIO FRANCISCO DIAS DA SILVA**<br>
 **BERNARDO FLORES SALMERON**<br>
 **GABRIELA BOHANA FERREIRA LIMA**<br>
 **JOÃO PEDRO SANTANA NUNES**<br>

@@ -1,4 +1,4 @@
-# sistema-tcc
+# Sistema TCC
 Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos em Sistemas de Informação e Web I (UFBA).
 
 ## EQUIPE:

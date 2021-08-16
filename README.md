@@ -14,7 +14,7 @@ Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos e
 
 ## TECNOLOGIAS UTILIZADAS
 
-### Front-end <br>
+> Front-end <br>
 > Javascript com React.js 
 
 > Back-end: <br>

@@ -14,15 +14,12 @@ Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos e
 
 ## TECNOLOGIAS UTILIZADAS
 
-### Desenvolvimento
-
-Front-end <br>
+### Front-end <br>
 > Javascript com React.js 
 
 > Back-end: <br>
 > PHP com Framework Yii2 <br>
 > Construção de RESTFUL API para comunicação com o Front-End
-
 
 ### Gestão
 

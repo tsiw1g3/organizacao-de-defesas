@@ -32,4 +32,4 @@ Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos e
 > Deploy do backend com Heroku
 
 
-*OBS: Durante o decorrer do projeto, a equipe pode ou não mudar um ou mais aspectos sobre as dexcisões de quais tecnologias serão utilizadas.*
+*OBS: No decorrer do projeto, a equipe poderá alterar um ou mais aspectos ou tecnologias que serão utilizadas.*

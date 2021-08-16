@@ -16,11 +16,11 @@ Repositório do projeto da equipe 3 da disciplina Tópicos em Sistemas de Inform
 
 ### Desenvolvimento
 
-> Front-end 
+> Front-end <br>
 > Javascript com React.js e Bootstrap 
 
-> Back-end: 
-> PHP comYii2
+> Back-end: <br>
+> PHP comYii2 <br>
 > Contrução de RESTFUL API para comunicação com o Front-End
 
 
@@ -30,6 +30,6 @@ Repositório do projeto da equipe 3 da disciplina Tópicos em Sistemas de Inform
 
 ### Deploy
 
-> Deploy de build do Front-end com Netlify ou Vercel
+> Deploy de build do Front-end com Netlify ou Vercel <br>
 > Deploy do backend com Heroku
 

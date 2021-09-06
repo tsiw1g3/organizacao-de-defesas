@@ -26,7 +26,15 @@ Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos e
 
 ### Gestão
 
-> Kanban no grupo do Github
+> [Kanban, ir para o documento](https://github.com/tsiw1g3/organizacao-de-defesas/projects/1)
+
+### Requisitos
+
+> [Ir para o documento](/Requisitos.md)
+
+### Arquitetura
+
+> [Ir para o documento](https://www.figma.com/file/omOLGgnfSvH1Xwrl6KjzQb/Moon---Monografia-Online---Arquitetura?node-id=0%3A1)
 
 ### Deploy
 

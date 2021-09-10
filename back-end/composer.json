@@ -7,8 +7,12 @@
     },
     "authors": [
         {
-            "name": "Arief Wijaya",
-            "email": "hoaaah.arief@gmail.com"
+            "name": "Rafael Bahia",
+            "email": "rafael.bahia@ufba.br"
+        },
+        {
+            "name": "Bernado Flores",
+            "email": "bfsalmeron@outlook.com"
         }
     ],
     "repositories": [

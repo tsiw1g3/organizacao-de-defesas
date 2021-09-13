@@ -72,7 +72,7 @@ return [
 ];
 ```
 
-**NOTES:**
+**NOTAS:**
 - Yii não criará o banco de dados para você, isso tem que ser feito manualmente antes que você possa acessá-lo.
 - Verifique e edite os outros arquivos no diretório `config /` para personalizar seu aplicativo conforme necessário.
 - Consulte o README no diretório `tests` para informações específicas para testes de aplicativos básicos.

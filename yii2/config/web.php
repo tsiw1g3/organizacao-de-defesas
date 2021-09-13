@@ -21,7 +21,7 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'enableAutoLogin' => false,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -42,7 +42,16 @@ $config = [
                 ],
             ],
         ],
+        'session' => [
+            'class' => 'yii\web\DbSession',
+        ],
         'db' => $db,
+        'formatter' => [
+            'dateFormat' => 'dd.MM.yyyy',
+            'decimalSeparator' => ',',
+            'thousandSeparator' => ' ',
+            'currencyCode' => 'BRL',
+       ],        
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,

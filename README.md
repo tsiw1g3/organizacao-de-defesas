@@ -36,6 +36,10 @@ Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos e
 
 > [Ir para o documento](https://www.figma.com/file/omOLGgnfSvH1Xwrl6KjzQb/Moon---Monografia-Online---Arquitetura?node-id=0%3A1)
 
+### Proposta de implantação
+
+> [Ir para o documento](https://docs.google.com/document/d/1AEIiL_KXmEXYqtr_rjcu3SzjjS66QnTfeDhzjwOUw-s/edit?usp=sharing)
+
 ### Deploy
 
 > Deploy de build do Front-end com Netlify ou Vercel <br>

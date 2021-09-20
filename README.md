@@ -40,6 +40,9 @@ Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos e
 
 > [Ir para o documento](https://docs.google.com/document/d/1AEIiL_KXmEXYqtr_rjcu3SzjjS66QnTfeDhzjwOUw-s/edit?usp=sharing)
 
+### Proposta de testes
+> [Ir para o documento](https://docs.google.com/document/d/1D7JjkZk1eRJPTym_9cMlOI_EFVOQ1neI3us96DuWGbk/edit)
+
 ### Deploy
 
 > Deploy de build do Front-end com Netlify ou Vercel <br>

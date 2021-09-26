@@ -2,14 +2,26 @@
 
 namespace app\security;
 
+use app\models\Session;
+use app\models\User;
+use app\models\Usuario;
+use Yii;
 
 class ValidatorRequest
 {
 
     public static function validatorHeader($headers)
     {
-        $accept = $headers->get('Authorization');
-        // throw new \yii\web\NotFoundHttpException('The requested page does not exist.', 500);
-        return $accept;
+        $token = $headers->get('Authorization');
+        $session_db = Session::findOne($token);
+        if(!$session_db) {
+            return false;
+        }
+        $model = Usuario::findIdentityByAccessToken($session_db->token_access);
+        if(!Yii::$app->user->login($model)) {
+            return false;
+        }
+
+        return true;
     }
 }

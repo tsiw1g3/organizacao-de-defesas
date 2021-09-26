@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\web\IdentityInterface;
 
 /**
  * This is the model class for table "usuario".
@@ -19,7 +20,7 @@ use Yii;
  * @property string $created_at
  * @property string $updated_at
  */
-class Usuario extends \yii\db\ActiveRecord
+class Usuario extends \yii\db\ActiveRecord implements IdentityInterface
 {
     /**
      * {@inheritdoc}
@@ -63,5 +64,52 @@ class Usuario extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];
+    }
+
+    /**
+     * Localiza uma identidade pelo ID informado
+     *
+     * @param string|int $id o ID a ser localizado
+     * @return IdentityInterface|null o objeto da identidade que corresponde ao ID informado
+     */
+    public static function findIdentity($id)
+    {
+        return static::findOne($id);
+    }
+
+    /**
+     * Localiza uma identidade pelo token informado
+     *
+     * @param string $token o token a ser localizado
+     * @return IdentityInterface|null o objeto da identidade que corresponde ao token informado
+     */
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+        return static::findOne(['auth_key' => $token]);
+    }
+
+    /**
+     * @return int|string o ID do usuário atual
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string a chave de autenticação do usuário atual
+     */
+    public function getAuthKey()
+    {
+        return $this->auth_key;
+    }
+
+    /**
+     * @param string $authKey
+     * @return bool se a chave de autenticação do usuário atual for válida
+     */
+    public function validateAuthKey($authKey)
+    {
+        return $this->getAuthKey() === $authKey;
     }
 }

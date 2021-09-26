@@ -14,7 +14,7 @@ use Yii;
  * @property string $email
  * @property string $school
  * @property string $academic_title
- * @property string $lattesUrl
+ * @property string|null $lattesUrl
  * @property string $status
  * @property string $created_at
  * @property string $updated_at
@@ -35,8 +35,10 @@ class Usuario extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'password_has', 'auth_key', 'email', 'school', 'academic_title', 'lattesUrl', 'status', 'created_at', 'updated_at'], 'required'],
+            [['username', 'password_has', 'auth_key', 'email', 'school', 'academic_title', 'status', 'created_at', 'updated_at'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
+            [['username', 'email', 'auth_key'], 'unique'],
+            [['password_has', 'username', 'email'], 'default'],
             [['username', 'password_has', 'auth_key'], 'string', 'max' => 255],
             [['email', 'school', 'academic_title', 'lattesUrl'], 'string', 'max' => 64],
             [['status'], 'string', 'max' => 12],

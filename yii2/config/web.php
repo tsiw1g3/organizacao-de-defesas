@@ -15,6 +15,18 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'Jn7jOniUIfgOTJGzTioxpzIlm7oHTDfm',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ]
+        ],
+        'response' => [
+            'class' => 'yii\web\Response',
+            'on beforeSend' => function ($event) {
+                yii::createObject([
+                    'class' => yiier\helpers\ResponseHandler::class,
+                    'event' => $event,
+                ])->formatResponse();
+            },
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -22,6 +34,8 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => false,
+            'enableSession' => false,
+            'loginUrl' => 403
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -44,6 +58,11 @@ $config = [
         ],
         'session' => [
             'class' => 'yii\web\DbSession',
+            // 'writeCallback' => function($session) {
+            //     return [
+            //         'token_access' => Yii::$app->user->to
+            //     ]
+            // }
         ],
         'db' => $db,
         'formatter' => [
@@ -51,15 +70,21 @@ $config = [
             'decimalSeparator' => ',',
             'thousandSeparator' => ' ',
             'currencyCode' => 'BRL',
-       ],        
-        /*
+        ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => true,
             'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule', 'controller' => ['usuario' => 'usuario'], 'except' => ['delete'],
+                    'extraPatterns' => [
+                        'POST login' => 'login',
+                    ]
+                ],
+                'POST login' => 'login/login',
             ],
         ],
-        */
     ],
     'params' => $params,
 ];

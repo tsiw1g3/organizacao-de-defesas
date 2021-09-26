@@ -110,7 +110,8 @@ CREATE TABLE `session`
 (
     `id` CHAR(40) NOT NULL,
     `expire` INTEGER,
-    `data` BLOB
+    `data` BLOB,
+    `token_access`varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 -- Índices para tabelas despejadas
@@ -190,7 +191,11 @@ ALTER TABLE `usuario_banca`
 --
 ALTER TABLE `session`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;  
-  
+
+ALTER TABLE `organizacao_defesa`.`usuario` ADD UNIQUE `auth_key` (`auth_key`) USING BTREE;
+ALTER TABLE `organizacao_defesa`.`usuario` ADD UNIQUE `username` (`username`) USING BTREE;
+ALTER TABLE `organizacao_defesa`.`usuario` ADD UNIQUE `email` (`email`) USING BTREE;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -12,57 +12,28 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [
-            'access' => [
-                'class' => AccessControl::class,
-                'only' => ['logout'],
-                'rules' => [
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::class,
-                'actions' => [
-                    'logout' => ['post'],
-                ],
-            ],
-        ];
-    }
 
+    public $modelClass = 'app\models\User';
     /**
-     * {@inheritdoc}
-     */
-    public function actions()
-    {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
-            'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
-        ];
-    }
-
-    /**
-     * Displays homepage.
+     * Checks the privilege of the current user.
      *
-     * @return string
+     * This method should be overridden to check whether the current user has the privilege
+     * to run the specified action against the specified data model.
+     * If the user does not have access, a [[ForbiddenHttpException]] should be thrown.
+     *
+     * @param string $action the ID of the action to be executed
+     * @param \yii\base\Model $model the model to be accessed. If `null`, it means no specific model is being accessed.
+     * @param array $params additional parameters
+     * @throws ForbiddenHttpException if the user does not have access
      */
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
+    // public function checkAccess($action, $model = null, $params = [])
+    // {
+    //     // check if the user can access $action and $model
+    //     // throw ForbiddenHttpException if access should be denied
+    //     if (true) {
+    //         throw new \yii\web\ForbiddenHttpException(sprintf('You can only %s articles that you\'ve created.', $action));
+    //     }
+    // }
 
     /**
      * Login action.
@@ -71,19 +42,21 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
+        throw new \yii\web\ForbiddenHttpException('You can only %s articles that you\'ve created.');
 
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
+        // if (!Yii::$app->user->isGuest) {
+        //     return $this->goHome();
+        // }
 
-        $model->password = '';
-        return $this->render('login', [
-            'model' => $model,
-        ]);
+        // $model = new LoginForm();
+        // if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        //     return $this->goBack();
+        // }
+
+        // $model->password = '';
+        // return $this->render('login', [
+        //     'model' => $model,
+        // ]);
     }
 
     /**
@@ -98,36 +71,22 @@ class SiteController extends Controller
         return $this->goHome();
     }
 
-    /**
-     * Displays contact page.
-     *
-     * @return Response|string
+        /**
+     * @return array
      */
-    public function actionContact()
+    public function actionError()
     {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
+        $exception = Yii::$app->errorHandler->exception;
+        if ($exception !== null) {
+            Yii::error([
+                // 'request_id' => Yii::$app->requestId->id,
+                'exception' => $exception->getMessage(),
+                'line' => $exception->getLine(),
+                'file' => $exception->getFile(),
+            ], 'response_data_error');
+            return json_encode(['code' => $exception->statusCode, 'message' => $exception->getMessage()]);
         }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
+        return json_encode([]);
     }
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
-
-    public function actionTeste()
-    {
-        return "Teste";
-    }
 }

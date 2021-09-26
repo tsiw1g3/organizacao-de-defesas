@@ -42,17 +42,16 @@ INSTALAÇÃO
 Se você não possui o [Composer](http://getcomposer.org/), você pode instalá-lo seguindo as instruções
 em [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
-Você pode então instalar esta estrutura de projeto usando o seguinte comando:
+Para instalar as dependências deste projeto, execute o comando abaixo no caminho organizacao-de-defesas/yii2/.
 
 ~~~
-composer create-project --prefer-dist yiisoft/yii2-app-basic basic
+composer update
 ~~~
 
-Agora você deve ser capaz de acessar o aplicativo através da seguinte URL, assumindo que `basic` é o diretório
-diretamente na raiz da Web.
+Agora você deve ser capaz de realizar requisições para API com o seguinte host:
 
 ~~~
-http://localhost/basic/web/
+http://localhost:8080/
 ~~~
 
 CONFIGURAÇÃO

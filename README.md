@@ -43,10 +43,15 @@ Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos e
 ### Proposta de testes
 > [Ir para o documento](https://docs.google.com/document/d/1D7JjkZk1eRJPTym_9cMlOI_EFVOQ1neI3us96DuWGbk/edit)
 
+### Rotas 
+> [Ir para o documento](https://docs.google.com/document/d/1o0kpT5MFI9o9xPC6fqU_LS-DvPXFcG9tfBbuJdw3OOk/edit?usp=sharing)
+
 ### Deploy
 
 > Deploy de build do Front-end com Netlify ou Vercel <br>
 > Deploy do backend com Heroku
+
+
 
 
 *OBS: No decorrer do projeto, a equipe poderá alterar um ou mais aspectos ou tecnologias que serão utilizadas.*

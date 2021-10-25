@@ -13,19 +13,12 @@
 ### O sistema possui bancas:
 - Cada banca tem um código identificador.
 - Cada banca tem uma data de cadastro.
+- Cada banca tem um tipo de defesa (TCC, Mestrado, Doutorado)
 - Cada banca possui membros, divididos em => Orientador: Possui acesso total a edição e leitura e é responsável pela criação da banca. O orientador pode convidar membros da banca; Membro da banca: Possui acesso à leitura em qualquer momento e à edição até a data da defesa e pode avaliar o orientando;
 Orientando: Pode possuir acesso apenas à leitura, ou pode fazer upload da defesa, caso a permissão lhe seja concedida. Não poderá acessar o relatório de defesa.
 - Cada banca possui uma data da defesa.
 - Cada banca pode gerar um relatório de defesa no formato PDF.
 - Cada banca pode gerar uma ata no formato PDF.
-
-### O sistema possui documentos:
-- Cada documento possui um código identificador.
-- Cada documento possui um nome baseado no hash e extensão.
-- Cada documento possui usuário que o submeteu
-- Cada documento possui uma banca a qual está vinculado
-- Cada documento possui uma descrição sobre que tipo de documento é
-- Cada documento possui uma data de submissão no sistema.
 
 ### O sistema possui tela de login:
 - Usuários podem fazer login com email e senha

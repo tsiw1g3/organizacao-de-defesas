@@ -34,7 +34,7 @@ Repositório do projeto da equipe 3 do componente curricular MATE85 - Tópicos e
 
 ### Arquitetura
 
-> [Ir para o documento](https://www.figma.com/file/omOLGgnfSvH1Xwrl6KjzQb/Moon---Monografia-Online---Arquitetura?node-id=0%3A1)
+![Architecture](arquitetura.png)
 
 ### Proposta de implantação
 
